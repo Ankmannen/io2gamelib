@@ -4,26 +4,22 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D5C393BA-6ABE-4137-9BBA-EB3B2699EBE1}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{EE4943C7-EFFE-4534-9C31-08B2BE36E775}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>io2gamelib</RootNamespace>
-    <AssemblyName>io2gamelib</AssemblyName>
+    <RootNamespace>IO2GameLib.ReferenceGame</RootNamespace>
+    <AssemblyName>IO2GameLib.ReferenceGame</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>io2gamelib_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <PackageCertificateKeyFile>IO2GameLib.ReferenceGame_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\Windows8\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -32,14 +28,14 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\Windows8\Release\</OutputPath>
     <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <OutputPath>bin\Windows8\ARM\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
@@ -49,7 +45,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
-    <OutputPath>bin\ARM\Release\</OutputPath>
+    <OutputPath>bin\Windows8\ARM\Release\</OutputPath>
     <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
@@ -61,7 +57,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
+    <OutputPath>bin\Windows8\x64\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
@@ -71,7 +67,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>bin\x64\Release\</OutputPath>
+    <OutputPath>bin\Windows8\x64\Release\</OutputPath>
     <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
@@ -83,7 +79,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\Debug\</OutputPath>
+    <OutputPath>bin\Windows8\x86\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
@@ -93,7 +89,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>bin\x86\Release\</OutputPath>
+    <OutputPath>bin\Windows8\x86\Release\</OutputPath>
     <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
@@ -105,14 +101,14 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Reference Include="MonoGame.Framework.Windows8">
-      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\MonoGame.Framework.Windows8.dll</HintPath>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX">
       <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.dll</HintPath>
     </Reference>
-    <Reference Include="SharpDX.Input">
-      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.Input.dll</HintPath>
+    <Reference Include="SharpDX.XInput">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.XInput.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Direct2D1">
       <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.Direct2D1.dll</HintPath>
@@ -120,58 +116,82 @@
     <Reference Include="SharpDX.Direct3D11">
       <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.Direct3D11.dll</HintPath>
     </Reference>
-    <Reference Include="SharpDX.DXGL">
-      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.DXGL.dll</HintPath>
+    <Reference Include="SharpDX.DXGI">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.DXGI.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.MediaFoundation">
       <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.MediaFoundation.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpDX.Toolkit.Graphics">
-      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.Toolkit.Graphics.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.XAudio2">
       <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\SharpDX.XAudio2.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameLibGame.cs" />
-    <Compile Include="GameLibSettings.cs" />
-    <Compile Include="GameLibUI\GluiButton.cs" />
-    <Compile Include="GameLibUI\GluiControl.cs" />
-    <Compile Include="GameLibUI\GluiLabel.cs" />
-    <Compile Include="Helpers\Extensions.cs" />
-    <Compile Include="Helpers\GraphicsHelper.cs" />
-    <Compile Include="Helpers\MathUtil.cs" />
-    <Compile Include="Helpers\ServiceLocator.cs" />
-    <Compile Include="Input\InputManager.cs" />
-    <Compile Include="Objects\BoundingBox.cs" />
-    <Compile Include="Objects\CollisionCategory.cs" />
-    <Compile Include="Objects\CollisionModes.cs" />
-    <Compile Include="Objects\MousePointer.cs" />
-    <Compile Include="Objects\Object2D.cs" />
-    <Compile Include="Objects\ObjectBroker.cs" />
-    <Compile Include="Objects\ObjectManager.cs" />
-    <Compile Include="Objects\Path.cs" />
-    <Compile Include="Objects\PathManager.cs" />
-    <Compile Include="Objects\State.cs" />
-    <Compile Include="Objects\StateManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="TheReferenceGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Screens\BackgroundScreen.cs" />
-    <Compile Include="Screens\ImageSplashScreen.cs" />
-    <Compile Include="Screens\MenuEntry.cs" />
-    <Compile Include="Screens\MenuScreenBase.cs" />
-    <Compile Include="Screens\MessagePopupScreen.cs" />
-    <Compile Include="Screens\PopupScreenBase.cs" />
-    <Compile Include="Screens\ScreenBase.cs" />
-    <Compile Include="Screens\ScreenManager.cs" />
-    <Compile Include="Screens\SelectionPopup\SelectionItem.cs" />
-    <Compile Include="Screens\SelectionPopup\SelectionPopupScreen.cs" />
-    <Compile Include="Screens\SimpleSplashScreen.cs" />
-    <Compile Include="Screens\TextInputMenuEntry.cs" />
-    <Compile Include="Services\AudioService.cs" />
-    <Compile Include="Services\IAudioService.cs" />
-    <Compile Include="Sheets\SpriteSheet.cs" />
-    <Compile Include="Sheets\SpriteSheetManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\background.xnb">
+      <Link>Content\io2GameLib\background.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\black.xnb">
+      <Link>Content\io2GameLib\black.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\duck.xnb">
+      <Link>Content\io2GameLib\duck.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\GameLibHeaderFont.xnb">
+      <Link>Content\io2GameLib\GameLibHeaderFont.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\GameLibSmallFont.xnb">
+      <Link>Content\io2GameLib\GameLibSmallFont.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\Glui\buttonBackDark.xnb">
+      <Link>Content\io2GameLib\Glui\buttonBackDark.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\Glui\buttonBackLight.xnb">
+      <Link>Content\io2GameLib\Glui\buttonBackLight.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\Glui\GluiLargeFont.xnb">
+      <Link>Content\io2GameLib\Glui\GluiLargeFont.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\Glui\GluiNormalFont.xnb">
+      <Link>Content\io2GameLib\Glui\GluiNormalFont.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\Glui\popupback.xnb">
+      <Link>Content\io2GameLib\Glui\popupback.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\pointer.xnb">
+      <Link>Content\io2GameLib\pointer.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\square.xnb">
+      <Link>Content\io2GameLib\square.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\white32.xnb">
+      <Link>Content\io2GameLib\white32.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\io2GameLibContent\DummyContentProject\bin\Windows Phone\Debug\Content\io2GameLib\whitepixel.xnb">
+      <Link>Content\io2GameLib\whitepixel.xnb</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="IO2GameLib.ReferenceGame_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.png" />
@@ -179,13 +199,25 @@
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IO2GameLib\IO2GameLib.Windows8.csproj">
+      <Project>{d5c393ba-6abe-4137-9bba-eb3b2699ebe1}</Project>
+      <Name>IO2GameLib.Windows8</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
