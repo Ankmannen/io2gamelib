@@ -164,6 +164,18 @@ namespace io2GameLib.Objects
                  minX, minY, (maxX-minX), (maxY - minY));
         }
 
+        /// <summary>
+        /// Returns the bounding box that covers the entire object
+        /// </summary>
+        /// <remarks>
+        /// If an object contains multiple bounding boxes or are rotated
+        /// the lo-fi bounding box will cover them all. 
+        /// </remarks>
+        public Rectangle LoFiBoundingBox
+        {
+            get { return BoundingRectangle; }
+        }
+
 
         private float FindMinX()
         {
